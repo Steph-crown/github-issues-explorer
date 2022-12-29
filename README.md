@@ -1,6 +1,6 @@
 # github-issues-explorer
 
-An app you can use to explore, search for, and filter public GitHub issues in repositories.
+An app you can use to explore, search for, and filter public GitHub issues.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -1,8 +1,12 @@
 import { FC } from "react";
-import { Button } from "../../components";
+import { Header } from "../../components";
 
 const Index: FC = () => {
-  return <Button></Button>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default Index;

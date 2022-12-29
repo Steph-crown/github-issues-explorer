@@ -6,6 +6,18 @@
   }
 
   .toggle-btn {
-    @apply bg-fg-default-light dark:bg-fg-default-dark fixed right-10 bottom-10 p-2 rounded-sm;
+    @apply bg-fg-default-light dark:bg-fg-default-dark fixed right-4 bottom-4 md:right-10 md:bottom-10 p-2 rounded-sm;
+  }
+
+  .app-header {
+    @apply pt-12 md:pt-16 lg:pt-24 pb-6 flex items-end border-b border-b-border-light dark:border-b-border-dark justify-between;
+  }
+
+  .sub-head {
+    @apply text-sm md:text-lg lg:text-base font-normal text-muted-light dark:text-muted-dark leading-[150%] mt-2;
+  }
+
+  .container {
+    @apply px-4 md:px-8 lg:px-24 mx-auto xl:max-w-7xl 2xl:max-w-7xl;
   }
 }
