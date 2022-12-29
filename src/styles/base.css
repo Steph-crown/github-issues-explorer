@@ -4,7 +4,24 @@
   * {
     @apply transition-all ease-in box-border m-0 p-0;
   }
+
   body {
     @apply bg-white dark:bg-black;
+  }
+
+  p,
+  b,
+  header,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-black dark:text-white;
+  }
+
+  h1 {
+    @apply text-2xl md:text-3xl lg:text-[32px] leading-[150%] font-semibold text-fg-default-light dark:text-fg-default-dark;
   }
 }
