@@ -1,0 +1,10 @@
+@tailwind base;
+
+@layer base {
+  * {
+    @apply transition-all ease-in box-border m-0 p-0;
+  }
+  body {
+    @apply bg-white dark:bg-black;
+  }
+}

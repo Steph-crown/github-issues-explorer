@@ -7,10 +7,10 @@ const App = () => {
   const { handleThemeToggle } = useThemes();
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div>
       <Home />
 
-      <button className="bg-black" onClick={handleThemeToggle}>
+      <button className="toggle-btn" onClick={handleThemeToggle}>
         <ThreeBars />
       </button>
     </div>
