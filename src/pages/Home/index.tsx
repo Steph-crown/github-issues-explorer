@@ -1,11 +1,12 @@
 import { FC } from "react";
-import { Header, SearchGroup } from "../../components";
+import { Header, IssuesTable, SearchGroup } from "../../components";
 
 const Index: FC = () => {
   return (
     <>
       <Header />
       <SearchGroup />
+      <IssuesTable />
     </>
   );
 };
