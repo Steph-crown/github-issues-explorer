@@ -7,8 +7,9 @@ const FilterItem: FC<IProps> = ({
   active,
   color,
   className,
+  onClick,
 }) => {
-  const buttonClassName = `text-sm flex items-center btn ${
+  const buttonClassName = `text-sm capitalize flex items-center btn ${
     className ? className : ""
   }`;
 
@@ -28,7 +29,12 @@ const FilterItem: FC<IProps> = ({
   const iconClassName = `${active ? iconActiveColor[color] : ""} mr-1`;
 
   return (
-    <button className={buttonClassName}>
+    <button
+      className={buttonClassName}
+      onClick={() => {
+        onClick(title);
+      }}
+    >
       <Icon className={iconClassName} />
 
       <span className={textClassName}>
@@ -47,4 +53,5 @@ interface IProps {
   active: boolean;
   color: string;
   className?: string;
+  onClick: (title: string) => void;
 }
