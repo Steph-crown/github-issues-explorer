@@ -2,7 +2,19 @@
 
 @layer components {
   .btn {
-    @apply cursor-pointer outline-none border-none;
+    @apply cursor-pointer outline-none border-none flex items-center whitespace-pre rounded-lg font-SF-pro-text tracking-[-0.15px] font-semibold text-sm hover:scale-105 justify-center;
+  }
+
+  .btn-outline {
+    @apply border border-outline-light dark:border-outline-dark border-solid py-[9px] px-4 bg-table-head-light dark:bg-table-head-dark text-fg-default-light dark:text-fg-default-dark;
+  }
+
+  .btn-green {
+    @apply bg-green py-[10px] px-3 text-white;
+  }
+
+  .icon-btn {
+    @apply mr-[10px];
   }
 
   .toggle-btn {
@@ -10,7 +22,7 @@
   }
 
   .app-header {
-    @apply pt-12 md:pt-16 lg:pt-24 pb-6 flex items-end border-b border-b-border-light dark:border-b-border-dark justify-between;
+    @apply pt-10 md:pt-12 lg:pt-16 pb-6 lg:pb-8 flex items-end border-b border-b-border-light dark:border-b-border-dark justify-between;
   }
 
   .sub-head {
@@ -19,5 +31,25 @@
 
   .container {
     @apply px-4 md:px-8 lg:px-24 mx-auto xl:max-w-7xl 2xl:max-w-7xl;
+  }
+
+  .search-group {
+    @apply flex items-center pt-6 lg:pt-8 flex-col min-[600px]:flex-row;
+  }
+
+  .search-form {
+    @apply flex w-full relative;
+  }
+
+  .search__btn-group {
+    @apply ml-0 flex items-center mt-2 min-[600px]:mt-0 min-[600px]:ml-10 w-full min-[600px]:w-min;
+  }
+
+  .input-icon-btn {
+    @apply absolute top-1/2 -translate-y-2/4 left-3;
+  }
+
+  .icon-input {
+    @apply pl-9;
   }
 }

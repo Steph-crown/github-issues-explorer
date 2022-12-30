@@ -2,7 +2,7 @@
 
 @layer base {
   * {
-    @apply transition-all ease-in box-border m-0 p-0 font-SF-pro-text;
+    @apply transition-all ease-in box-border m-0 p-0 font-SF-pro-display;
   }
 
   body {
@@ -23,5 +23,9 @@
 
   h1 {
     @apply text-2xl md:text-3xl lg:text-[32px] leading-[150%] font-semibold text-fg-default-light dark:text-fg-default-dark font-SF-pro-display tracking-[0.4px];
+  }
+
+  input {
+    @apply border bg-sub-default-light dark:bg-sub-default-dark border-border-light dark:border-border-dark w-full py-2 px-3 rounded-lg outline-none focus:border-border-blue focus:border-2 leading-[24px] text-base text-muted-light dark:text-muted-dark font-light;
   }
 }
