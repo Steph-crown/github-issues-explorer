@@ -9,6 +9,7 @@ module.exports = {
       green: "#2DA44E",
       purple: "#8250DF",
       white: "#FFFFFF",
+      "border-blue": "#58A6FF",
     },
     extend: {
       colors: {
@@ -31,6 +32,10 @@ module.exports = {
         "table-head": {
           light: "#F6F8FA",
           dark: "#171B21",
+        },
+        outline: {
+          light: "rgba(36, 41, 47, 0.4)",
+          dark: "#24292F",
         },
       },
       fontFamily: {
