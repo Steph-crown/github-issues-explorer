@@ -14,7 +14,7 @@
   }
 
   .sub-head {
-    @apply text-sm md:text-lg lg:text-base font-normal text-muted-light dark:text-muted-dark leading-[150%] mt-2;
+    @apply text-sm md:text-lg lg:text-lg font-normal text-muted-light dark:text-muted-dark leading-[150%] mt-1 lg:mt-2;
   }
 
   .container {

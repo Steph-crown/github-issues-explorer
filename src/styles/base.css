@@ -2,7 +2,7 @@
 
 @layer base {
   * {
-    @apply transition-all ease-in box-border m-0 p-0;
+    @apply transition-all ease-in box-border m-0 p-0 font-SF-pro-text;
   }
 
   body {
@@ -18,10 +18,10 @@
   h4,
   h5,
   h6 {
-    @apply text-black dark:text-white;
+    @apply text-black dark:text-white tracking-[0.2px] md:tracking-[0.3px];
   }
 
   h1 {
-    @apply text-2xl md:text-3xl lg:text-[32px] leading-[150%] font-semibold text-fg-default-light dark:text-fg-default-dark;
+    @apply text-2xl md:text-3xl lg:text-[32px] leading-[150%] font-semibold text-fg-default-light dark:text-fg-default-dark font-SF-pro-display tracking-[0.4px];
   }
 }
