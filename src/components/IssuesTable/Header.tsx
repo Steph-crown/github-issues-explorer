@@ -8,7 +8,7 @@ import {
 import { useTableHeadFilter } from "../../hooks";
 import FilterItem from "./FilterItem";
 
-const IssuesTableHead: FC = () => {
+const IssuesTableHeader: FC = () => {
   const { filters, setFilterFieldvalue } = useTableHeadFilter();
 
   const handleFilter = (title: string) => {
@@ -64,4 +64,4 @@ const IssuesTableHead: FC = () => {
   );
 };
 
-export default IssuesTableHead;
+export default IssuesTableHeader;
