@@ -3,7 +3,7 @@ import { Issues } from "../../api/services";
 import IssuesTableHead from "../IssuesTableHead";
 
 const IssuesTable: FC = () => {
-  const { issues, getIssues } = Issues.useList();
+  const { issues } = Issues.useList();
 
   return (
     <section className="container">
