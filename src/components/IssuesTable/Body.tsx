@@ -4,7 +4,6 @@ import Card from "./Card";
 
 const IssuesTableBody: FC = () => {
   const { issues } = Issues.useList();
-  console.log("the issues are", issues);
 
   return (
     <>
