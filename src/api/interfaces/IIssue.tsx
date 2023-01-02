@@ -10,13 +10,13 @@ interface IIssue {
   user: IUser;
   labels: ILabel[];
   state: "open" | "closed";
-  assignee: IUser | null;
+  assignee: IUser;
   assignees: IUser[];
   comments: number;
   createdAt: Date;
   updatedAt: Date;
   closedAt: Date;
-  pullRequest: IPullRequest | null;
+  pullRequest: IPullRequest;
   stateReason: string;
 }
 
