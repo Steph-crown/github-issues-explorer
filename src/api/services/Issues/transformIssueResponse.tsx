@@ -1,10 +1,4 @@
-import {
-  IIssue,
-  IUser,
-  IPullRequest,
-  ILabel,
-  IMilestone,
-} from "../../interfaces";
+import { IIssue, IUser, IPullRequest, ILabel } from "../../interfaces";
 
 const transformIssueResponse = (
   res: { [key: string]: string | object | number | null | boolean }[]
@@ -13,7 +7,6 @@ const transformIssueResponse = (
     const user = item.user as any;
     const assignee = item.assignee as any;
     const pullRequest = item.pull_request as any;
-    const milestone = item.milestone as any;
     const labels = (item.labels as ILabel[]).map((label) => ({
       id: label.id,
       name: label.name,
@@ -22,7 +15,6 @@ const transformIssueResponse = (
 
     return {
       htmlUrl: item.html_url as string,
-      repositoryUrl: item.repository_url as string,
       id: item.id as number,
       number: item.number as number,
       title: item.title as string,
@@ -43,12 +35,6 @@ const transformIssueResponse = (
           } as IUser)
         : null,
       assignees: [],
-      milestone: milestone
-        ? ({
-            htmlUrl: milestone.html_url as string,
-            title: milestone.title as string,
-          } as IMilestone)
-        : null,
       comments: item.comments as number,
       createdAt: item.created_at as Date,
       updatedAt: item.updated_at as Date,
