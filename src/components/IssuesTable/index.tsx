@@ -1,13 +1,16 @@
 import { FC } from "react";
-import Body from "./Body";
-import Header from "./Header";
+import { Issues } from "../../api/services";
+import IssuesTableHead from "../IssuesTableHead";
 
 const IssuesTable: FC = () => {
+  const { issues, getIssues } = Issues.useList();
+
   return (
-    <section className="container wrapper">
+    <section className="container">
       <div className="table-wrapper">
-        <Header />
-        <Body />
+        <> {console.log("these are issues", issues)}</>
+
+        <IssuesTableHead />
       </div>
     </section>
   );

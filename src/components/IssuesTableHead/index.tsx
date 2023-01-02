@@ -44,6 +44,7 @@ const IssuesTableHead: FC = () => {
         />
       </div>
       <div className="flex items-center justify-start sm:justify-end w-full sm:w-min pt-3 sm:pt-0">
+        <> {console.log("filters", filters)}</>
         <FilterItem
           Icon={IssueAssignedIcon}
           title={"assigned"}
