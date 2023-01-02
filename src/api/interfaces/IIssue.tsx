@@ -1,9 +1,11 @@
 import ILabel from "./ILabel";
+import IMilestone from "./IMilestone";
 import IPullRequest from "./IPullRequest";
 import IUser from "./IUser";
 
 interface IIssue {
   htmlUrl: string;
+  repositoryUrl: string;
   id: number;
   number: number;
   title: string;
@@ -12,6 +14,7 @@ interface IIssue {
   state: "open" | "closed";
   assignee: IUser | null;
   assignees: IUser[];
+  milestone: IMilestone | null;
   comments: number;
   createdAt: Date;
   updatedAt: Date;
