@@ -67,7 +67,7 @@
 
   /* issue card */
   .card {
-    @apply flex flex-col md:flex-row bg-white dark:bg-black border-b border-solid border-b-border-light dark:border-b-border-dark px-3 md:px-4 py-[10.5px];
+    @apply flex flex-col md:flex-row bg-white dark:bg-table-head-dark  sm:dark:bg-black border-b border-solid border-b-border-light dark:border-b-border-dark px-3 md:px-4 py-[10.5px];
   }
 
   .card:hover {
