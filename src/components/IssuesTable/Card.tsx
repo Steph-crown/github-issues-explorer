@@ -30,7 +30,7 @@ const IssuesTableCard: FC<IProps> = ({ issue }) => {
           <IssueStateIcon state={issue.state} />
         </figure>
         <div>
-          <div className="text-base font-bold break-all">
+          <div className="text-base font-bold ">
             <ExternalLink
               href={`https://github.com/${userNameSlashRepoName}`}
               className="mr-1 text-muted-light dark:text-muted-dark"

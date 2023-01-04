@@ -28,12 +28,12 @@ module.exports = {
           light: "#24292F",
         },
         "sub-default": {
-          dark: "#020409",
+          dark: "#010409",
           light: "#F6F8FA",
         },
         "table-head": {
           light: "#F6F8FA",
-          dark: "#171B21",
+          dark: "#161b22",
         },
         outline: {
           light: "rgba(36, 41, 47, 0.4)",

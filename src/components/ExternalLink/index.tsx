@@ -7,7 +7,13 @@ const ExternalLink: FC<
   >
 > = ({ children, href, ...rest }) => {
   return (
-    <a href={href} target="_blank" rel="noreferrer" {...rest}>
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      {...rest}
+      style={{ wordBreak: "break-word" }}
+    >
       {children}
     </a>
   );
