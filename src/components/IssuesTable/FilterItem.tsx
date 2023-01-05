@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { num } from "../../utils";
 
 const IssuesTableFilterItem: FC<IProps> = ({
   Icon,
@@ -38,7 +39,7 @@ const IssuesTableFilterItem: FC<IProps> = ({
       <Icon className={iconClassName} />
 
       <span className={textClassName}>
-        {value ? ` ${value} ` : ""} {title}
+        {value ? ` ${num.addCommas(value)} ` : ""} {title}
       </span>
     </button>
   );

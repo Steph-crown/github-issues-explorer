@@ -32,4 +32,8 @@
   input {
     @apply border bg-sub-default-light dark:bg-sub-default-dark border-border-light dark:border-border-dark w-full py-2 px-3 rounded-lg outline-none focus:border-border-blue dark:focus:border-border-blue focus:border-2 leading-[24px]  text-muted-light dark:text-muted-dark font-light text-sm font-normal;
   }
+
+  ::-webkit-scrollbar {
+    height: 0px;
+  }
 }

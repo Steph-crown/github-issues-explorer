@@ -67,7 +67,12 @@
 
   /* issue card */
   .card {
-    @apply flex flex-col md:flex-row bg-white dark:bg-table-head-dark  sm:dark:bg-black border-b border-solid border-b-border-light dark:border-b-border-dark px-3 md:px-4 py-[10.5px];
+    @apply flex flex-col sm:flex-row bg-white dark:bg-table-head-dark  sm:dark:bg-black border-b border-solid border-b-border-light dark:border-b-border-dark px-3 md:px-4 py-[10.5px] justify-between;
+  }
+
+  .card:last-child {
+    border-bottom: none;
+    border-radius: 0 0 8px 8px;
   }
 
   .card:hover {
@@ -76,5 +81,9 @@
 
   .card-icon {
     @apply mr-2;
+  }
+
+  .icon-flex {
+    @apply text-muted-light dark:text-muted-dark flex items-center text-xs;
   }
 }

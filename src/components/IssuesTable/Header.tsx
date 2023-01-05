@@ -24,7 +24,7 @@ const IssuesTableHeader: FC = () => {
 
   return (
     <header className="table-head">
-      <div className="flex items-center justify-start w-full sm:w-min pb-3 sm:pb-0 border-b sm:border-b-0 border-solid border-border-light dark:border-border-dark">
+      <div className="flex items-center justify-start w-full sm:w-min pb-3 sm:pb-0 border-b sm:border-b-0 border-solid border-border-light dark:border-border-dark overflow-x-scroll">
         <FilterItem
           Icon={IssueOpenedIcon}
           title={"open"}
