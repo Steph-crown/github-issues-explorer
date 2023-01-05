@@ -8,6 +8,7 @@ import {
 import { date, str } from "../../utils";
 import ExternalLink from "../ExternalLink";
 import Labels from "./Labels";
+import Stats from "./Stats";
 
 const IssueStateIcon: FC<{ state: "open" | "closed" }> = ({ state }) => {
   return state === "open" ? (
@@ -25,7 +26,7 @@ const IssuesTableCard: FC<IProps> = ({ issue }) => {
 
   return (
     <div className="card">
-      <div className="flex">
+      <div className="flex w-full sm:w-2/3 md:w-3/4 pr-3">
         <figure className="card-icon mt-[3px]">
           <IssueStateIcon state={issue.state} />
         </figure>
@@ -44,8 +45,10 @@ const IssuesTableCard: FC<IProps> = ({ issue }) => {
             >
               {issue.title}
             </ExternalLink>
+
             <Labels labels={issue.labels} />
           </div>
+
           <div className="text-xs font-light text-muted-light dark:text-muted-dark mt-2 flex items-center">
             <StateLabel
               number={issue.number}
@@ -64,6 +67,13 @@ const IssuesTableCard: FC<IProps> = ({ issue }) => {
           </div>
         </div>
       </div>
+
+      <Stats
+        pullRequestUrl={issue.pullRequest?.htmlUrl}
+        assignee={issue.assignee}
+        comments={issue.comments}
+        issueUrl={issue.htmlUrl}
+      />
     </div>
   );
 };
