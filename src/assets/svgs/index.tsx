@@ -1,3 +1,4 @@
+export { default as CloseIcon } from "./CloseIcon";
 export { default as CommentIcon } from "./CommentIcon";
 export { default as GithubLogo } from "./GithubLogo";
 export { default as IssueArchivedIcon } from "./IssueArchivedIcon";

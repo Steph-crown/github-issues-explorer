@@ -27,6 +27,10 @@ module.exports = {
           dark: "#C9D1D9",
           light: "#24292F",
         },
+        "modal-border": {
+          dark: "#31363C",
+          light: "#D1D7DD",
+        },
         "sub-default": {
           dark: "#010409",
           light: "#F6F8FA",

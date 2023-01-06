@@ -86,4 +86,20 @@
   .icon-flex {
     @apply text-muted-light dark:text-muted-dark flex items-center text-xs;
   }
+
+  /* modal component */
+  .overlay {
+    @apply bg-[rgba(0,0,0,0.2)] dark:bg-[rgba(0,0,0,0.5)] w-full h-full fixed left-0 top-0 bottom-0 right-0;
+  }
+
+  .modal {
+    @apply fixed bg-white dark:bg-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-fg-default-light dark:text-fg-default-dark border border-solid border-modal-border-light dark:border-modal-border-dark rounded-xl p-4 min-[560px]:px-6 min-[1024px]:px-8 w-[93%] max-w-[95%] min-[560px]:w-[520px] min-[876px]:w-[780px] min-[1320px]:w-[960px];
+
+    box-shadow: 0px 8px 24px rgba(66, 74, 83, 0.12),
+      0px 1px 3px rgba(27, 31, 36, 0.12);
+  }
+
+  .modal-header {
+    @apply flex items-center justify-between text-base md:text-lg xl:text-xl font-semibold text-fg-default-light dark:text-fg-default-dark;
+  }
 }
