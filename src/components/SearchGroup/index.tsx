@@ -1,7 +1,11 @@
 import { FC } from "react";
 import { FilterIcon, SearchIcon } from "../../assets/svgs";
+import useDisclosure from "../../hooks/useDisclosure";
+import Modal from "../Modal";
 
 const SearchGroup: FC = () => {
+  const { isOpen, handleClose, handleOpen } = useDisclosure();
+
   return (
     <section className="container">
       <div className="search-group">
@@ -21,9 +25,19 @@ const SearchGroup: FC = () => {
             <FilterIcon className="icon-btn" />
             Sort
           </button>
-          <button className="btn btn-green w-full">Advanced search</button>
+          <button className="btn btn-green w-full" onClick={handleOpen}>
+            Advanced search
+          </button>
         </div>
       </div>
+
+      <Modal
+        heading="Advanced search"
+        isOpen={isOpen}
+        handleClose={handleClose}
+      >
+        aua
+      </Modal>
     </section>
   );
 };
