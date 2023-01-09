@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { FilterIcon, SearchIcon } from "../../assets/svgs";
 import useDisclosure from "../../hooks/useDisclosure";
+import Input from "../Input";
 import Modal from "../Modal";
 
 const SearchGroup: FC = () => {
@@ -10,11 +11,7 @@ const SearchGroup: FC = () => {
     <section className="container">
       <div className="search-group">
         <form className="search-form">
-          <input
-            type="text"
-            className="input icon-input "
-            placeholder="Search by issue name"
-          />
+          <Input withIcon={true} placeholder="Search by issue name" />
           <button className="input-icon-btn">
             <SearchIcon />
           </button>
