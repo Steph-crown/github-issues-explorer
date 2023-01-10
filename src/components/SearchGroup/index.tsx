@@ -2,7 +2,7 @@ import { FC } from "react";
 import { FilterIcon, SearchIcon } from "../../assets/svgs";
 import useDisclosure from "../../hooks/useDisclosure";
 import Input from "../Input";
-import Modal from "../Modal";
+import AdvancedSearchModal from "./AdvancedSearchModal";
 
 const SearchGroup: FC = () => {
   const { isOpen, handleClose, handleOpen } = useDisclosure();
@@ -28,13 +28,7 @@ const SearchGroup: FC = () => {
         </div>
       </div>
 
-      <Modal
-        heading="Advanced search"
-        isOpen={isOpen}
-        handleClose={handleClose}
-      >
-        aua
-      </Modal>
+      <AdvancedSearchModal isOpen={isOpen} handleClose={handleClose} />
     </section>
   );
 };
