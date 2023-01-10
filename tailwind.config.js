@@ -35,6 +35,10 @@ module.exports = {
           dark: "#010409",
           light: "#F6F8FA",
         },
+        "select-border": {
+          dark: "#30363D",
+          light: "rgba(36, 41, 47, 0.4)",
+        },
         "table-head": {
           light: "#F6F8FA",
           dark: "#161b22",

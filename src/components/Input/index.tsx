@@ -10,7 +10,7 @@ const Input: FC<IProps> = ({
   return (
     <input
       type={type || "text"}
-      className={`input ${withIcon ? "icon-input" : ""} `}
+      className={`input ${withIcon ? "icon-input" : ""} ${className} `}
       placeholder={placeholder}
       {...rest}
     />
