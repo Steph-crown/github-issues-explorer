@@ -1,4 +1,5 @@
 import { FC } from "react";
+import DateSelect from "../DateSelect";
 import Modal from "../Modal";
 import Select, { IOption } from "../Select";
 
@@ -9,6 +10,12 @@ const AdvancedSearchModal: FC<IProps> = ({ isOpen, handleClose }) => {
         options={fakeOptions}
         onChange={(ev) => {
           console.log("ev.target.value", ev.target.value);
+        }}
+      />
+      <DateSelect
+        className="mt-8"
+        handleChange={(val) => {
+          console.log("the value is", val);
         }}
       />
     </Modal>

@@ -40,8 +40,18 @@
     background-position: right 16px center;
     -webkit-appearance: none;
     -moz-appearance: none;
-    text-indent: 1px;
     text-overflow: "";
+  }
+
+  input[type="date"] {
+    @apply bg-[url("./../assets/svgs/calendar-dark.svg")] dark:bg-[url("./../assets/svgs/calendar-light.svg")] bg-no-repeat;
+
+    background-position: right 16px center;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
   }
 
   ::-webkit-scrollbar {

@@ -102,4 +102,9 @@
   .modal-header {
     @apply flex items-center justify-between text-base md:text-lg xl:text-xl font-semibold text-fg-default-light dark:text-fg-default-dark;
   }
+
+  /* date select */
+  .date-select {
+    @apply flex items-center;
+  }
 }
