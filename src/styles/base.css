@@ -35,7 +35,7 @@
   }
 
   select {
-    @apply bg-[transparent] border-select-border-light dark:border-select-border-dark px-4 py-[10px] text-sm font-semibold pr-10 bg-[url("./../assets/svgs/chevron-down-light.svg")] dark:bg-[url("./../assets/svgs/chevron-down-dark.svg")] bg-no-repeat;
+    @apply bg-[transparent] border-select-border-light dark:border-select-border-dark px-4 py-[10px] text-sm font-medium pr-10 bg-[url("./../assets/svgs/chevron-down-light.svg")] dark:bg-[url("./../assets/svgs/chevron-down-dark.svg")] bg-no-repeat text-fg-default-light dark:text-fg-default-dark;
 
     background-position: right 16px center;
     -webkit-appearance: none;
@@ -56,5 +56,6 @@
 
   ::-webkit-scrollbar {
     height: 0px;
+    width: 0px;
   }
 }
