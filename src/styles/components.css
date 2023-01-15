@@ -93,18 +93,30 @@
   }
 
   .modal {
-    @apply fixed bg-white dark:bg-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-fg-default-light dark:text-fg-default-dark border border-solid border-modal-border-light dark:border-modal-border-dark rounded-xl p-4 min-[560px]:px-6 min-[1024px]:px-8 w-[93%] max-w-[95%] min-[560px]:w-[520px] min-[876px]:w-[780px] min-[1320px]:w-[960px];
+    @apply fixed bg-white dark:bg-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-fg-default-light dark:text-fg-default-dark border border-solid border-modal-border-light dark:border-modal-border-dark rounded-xl p-4 min-[560px]:px-6 min-[1024px]:px-8 w-[93%] max-w-[95%] min-[560px]:w-[520px] min-[876px]:w-[780px] min-[1320px]:w-[960px] max-h-[90vh] md:max-h-[80vh];
 
     box-shadow: 0px 8px 24px rgba(66, 74, 83, 0.12),
       0px 1px 3px rgba(27, 31, 36, 0.12);
   }
 
+  .action-bar {
+    @apply fixed bottom-0 right-0 left-0 w-full p-4 min-[560px]:px-6 min-[1024px]:px-8 bg-white dark:bg-black border-t border-solid border-t-border-light dark:border-t-border-dark flex items-center justify-end;
+  }
+
   .modal-header {
-    @apply flex items-center justify-between text-base md:text-lg xl:text-xl font-semibold text-fg-default-light dark:text-fg-default-dark;
+    @apply flex items-center justify-between text-base md:text-lg xl:text-xl font-semibold text-fg-default-light dark:text-fg-default-dark mb-4;
+  }
+
+  .modal-header h3 {
+    @apply text-xl font-semibold;
   }
 
   /* date select */
   .date-select {
     @apply flex items-center;
+  }
+
+  .form-group label {
+    @apply block text-muted-light dark:text-muted-dark text-sm font-medium mb-2;
   }
 }

@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Select: FC<IProps> = ({ className, options, ...rest }) => {
   return (
-    <select className={`select ${className}`} {...rest}>
+    <select className={`select ${className ? className : ""}`} {...rest}>
       {options.map((option) => (
         <option value={option.value} key={option.value}>
           {option.label}

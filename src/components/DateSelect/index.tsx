@@ -8,7 +8,6 @@ const DateSelect: FC<IProps> = ({ className, handleChange, ...rest }) => {
   const [dateValue, setDateValue] = useState("");
 
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    console.log("the selct value is", e.target.value);
     setSelectValue((prev) => e.target.value);
     handleChange(e.target.value + dateValue);
   };
@@ -19,15 +18,14 @@ const DateSelect: FC<IProps> = ({ className, handleChange, ...rest }) => {
   };
 
   return (
-    <div className={`date-select ${className}`}>
+    <div className={`date-select ${className ? className : ""}`}>
       <Select
         value={selectValue}
         className="w-min pr-8 text-center rounded-tr-none rounded-br-none bg-sub-default-light dark:bg-sub-default-dark"
         options={dateOptions}
         onChange={handleSelectChange}
       />
-      {/* <> {console.log("date", dateValue)}</>
-      <> {console.log("seect", selectValue)}</> */}
+
       <input
         type="date"
         value={dateValue}
