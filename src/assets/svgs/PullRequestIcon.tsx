@@ -8,7 +8,7 @@ const PullRequestIcon: FC<{ className?: string }> = ({ className }) => {
       viewBox="0 0 16 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={className ? className : ""}
     >
       <path
         fillRule="evenodd"
