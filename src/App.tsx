@@ -12,7 +12,6 @@ const App = () => {
       <IssuesProvider>
         <Home />
       </IssuesProvider>
-
       <button className="toggle-btn" onClick={handleThemeToggle}>
         <ThreeBars />
       </button>
