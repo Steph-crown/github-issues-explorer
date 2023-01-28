@@ -4,9 +4,12 @@ import { IssuesContext } from "../contexts";
 
 const IssuesProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [issues, setIssues] = useState<IIssue[]>([]);
+  const [loadingIssues, setLoadingIssues] = useState(true);
 
   return (
-    <IssuesContext.Provider value={{ issues, setIssues }}>
+    <IssuesContext.Provider
+      value={{ issues, setIssues, loadingIssues, setLoadingIssues }}
+    >
       {children}
     </IssuesContext.Provider>
   );

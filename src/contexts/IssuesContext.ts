@@ -8,4 +8,6 @@ export default IssuesContext;
 export interface IIssuesContext {
   issues: IIssue[];
   setIssues: Dispatch<SetStateAction<IIssue[]>>;
+  loadingIssues: boolean;
+  setLoadingIssues: React.Dispatch<React.SetStateAction<boolean>>;
 }
