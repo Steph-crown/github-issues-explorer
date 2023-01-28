@@ -46,7 +46,7 @@ const IssuesTableHeader: FC = () => {
       <div className="flex items-center justify-start sm:justify-end w-full sm:w-min pt-3 sm:pt-0">
         <FilterItem
           Icon={IssueAssignedIcon}
-          title={"assigned"}
+          title={"has been assigned"}
           active={filters.assigned}
           color="blue"
           onClick={handleFilter}

@@ -1,38 +1,24 @@
-import { useEffect, useState } from "react";
+import { Context, useContext, useEffect } from "react";
 import { requests } from "../../api";
+import { IssuesContext } from "../../contexts";
+import { IIssuesContext } from "../../contexts/IssuesContext";
 import { IIssue } from "../../interfaces";
-import fakeDb from "../fakeDb";
 import transformIssueResponse from "./transform";
 
 const useList = () => {
-  const [{ issues, loadingIssues }, setIssues] = useState<IIssuesState>({
-    issues: [],
-    loadingIssues: true,
-  });
+  const { setIssues, setLoadingIssues } = useContext(
+    IssuesContext as Context<IIssuesContext>
+  );
 
   const getIssues = async () => {
     try {
-      // setIssues((prev) => ({ ...prev, loadingIssues: true }));
-      // const res = await fakeDb.issues;
-      // setIssues((prev) => ({
-      //   ...prev,
-      //   issues: transformIssueResponse(res.items),
-      // }));
-
+      setLoadingIssues(true);
       const res = await requests.getIssues();
-
-      console.log("raw", res[0]);
-      console.log("transformed", transformIssueResponse(res)[0]);
-
-      setIssues((prev) => ({
-        ...prev,
-        issues: transformIssueResponse(res),
-      }));
+      setIssues((_) => transformIssueResponse(res));
+      setLoadingIssues(false);
     } catch (error) {
       console.log("Error");
       getIssues();
-    } finally {
-      setIssues((prev) => ({ ...prev, loadingIssues: true }));
     }
   };
 
@@ -41,7 +27,7 @@ const useList = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { getIssues, issues, loadingIssues };
+  return { getIssues };
 };
 
 export default useList;

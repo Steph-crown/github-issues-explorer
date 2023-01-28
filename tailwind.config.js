@@ -4,17 +4,16 @@ module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
-    colors: {
-      black: "#0D1117",
-      green: "#2DA44E",
-      purple: "#8250DF",
-      white: "#FFFFFF",
-      "border-blue": "#58A6FF",
-      red: "#CF222E",
-      blue: "#3B99FC",
-    },
+    // colors: {},
     extend: {
       colors: {
+        black: "#0D1117",
+        green: "#2DA44E",
+        purple: "#8250DF",
+        white: "#FFFFFF",
+        "border-blue": "#58A6FF",
+        red: "#CF222E",
+        blue: "#3B99FC",
         border: {
           dark: "#30363D",
           light: "#D0D7DE",

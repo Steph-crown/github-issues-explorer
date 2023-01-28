@@ -119,4 +119,23 @@
   .form-group label {
     @apply block text-muted-light dark:text-muted-dark text-sm font-medium mb-2;
   }
+
+  /* Loader */
+  .loader-container {
+    @apply mt-10 mb-10 flex justify-center;
+  }
+
+  .loader {
+    @apply w-6 h-6 border-[2px] border-solid border-muted-light dark:border-muted-dark border-b-transparent dark:border-b-transparent rounded-full inline-block;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
