@@ -94,7 +94,10 @@ const StateLabel: FC<IStatusLabel> = ({
   const restOfLabel =
     state === "open" ? (
       <>
-        opened {relativeTime} by {userName}
+        opened {relativeTime} by{" "}
+        <ExternalLink href={`https://github.com/${userName}`}>
+          {userName}
+        </ExternalLink>
       </>
     ) : (
       <>
