@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { requests } from "../../api";
 import { IIssue } from "../../interfaces";
 import fakeDb from "../fakeDb";
-import transformIssueResponse from "./transformIssueResponse";
+import transformIssueResponse from "./transform";
 
 const useList = () => {
   const [{ issues, loadingIssues }, setIssues] = useState<IIssuesState>({
@@ -20,7 +20,14 @@ const useList = () => {
       // }));
 
       const res = await requests.getIssues();
-      console.log("The response uis this", res);
+
+      console.log("raw", res[0]);
+      console.log("transformed", transformIssueResponse(res)[0]);
+
+      setIssues((prev) => ({
+        ...prev,
+        issues: transformIssueResponse(res),
+      }));
     } catch (error) {
       console.log("Error");
       getIssues();

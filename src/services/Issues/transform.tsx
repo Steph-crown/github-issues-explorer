@@ -6,7 +6,7 @@ import {
   IMilestone,
 } from "../../interfaces";
 
-const transformIssueResponse = (
+const transform = (
   res: { [key: string]: string | object | number | null | boolean }[]
 ): IIssue[] => {
   return res.map((item) => {
@@ -63,4 +63,4 @@ const transformIssueResponse = (
   });
 };
 
-export default transformIssueResponse;
+export default transform;
