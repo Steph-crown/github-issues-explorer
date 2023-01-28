@@ -1,5 +1,5 @@
 import useList from "./useList";
-import transform from "./transformIssueResponse";
+import transform from "./transform";
 
 const Issues = {
   // hooks
