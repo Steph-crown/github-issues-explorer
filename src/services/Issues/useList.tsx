@@ -2,7 +2,6 @@ import { Context, useContext, useEffect } from "react";
 import { requests } from "../../api";
 import { IssuesContext } from "../../contexts";
 import { IIssuesContext } from "../../contexts/IssuesContext";
-import { IIssue } from "../../interfaces";
 import transformIssueResponse from "./transform";
 
 const useList = () => {
@@ -31,8 +30,3 @@ const useList = () => {
 };
 
 export default useList;
-
-interface IIssuesState {
-  issues: IIssue[];
-  loadingIssues: boolean;
-}
