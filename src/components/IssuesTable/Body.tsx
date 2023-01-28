@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Issues } from "../../api/services";
+import { Issues } from "../../services";
 import Card from "./Card";
 
 const IssuesTableBody: FC = () => {

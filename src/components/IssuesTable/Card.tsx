@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IIssue } from "../../api/interfaces";
+import { IIssue } from "../../interfaces";
 import {
   IssueClosedIcon,
   IssueOpenedIcon,

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ILabel } from "../../api/interfaces";
+import { ILabel } from "../../interfaces";
 
 const IssuesTableLabels: FC<IProps> = ({ labels }) => {
   return (

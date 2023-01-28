@@ -1,4 +1,4 @@
-import useList from "./useListIssues";
+import useList from "./useList";
 import transform from "./transformIssueResponse";
 
 const Issues = {

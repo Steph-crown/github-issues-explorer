@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IUser } from "../../api/interfaces";
+import { IUser } from "../../interfaces";
 import { CommentIcon, PullRequestIcon } from "../../assets/svgs";
 import ExternalLink from "../ExternalLink";
 

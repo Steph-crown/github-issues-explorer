@@ -1,5 +1,5 @@
 import { createContext, Dispatch, SetStateAction } from "react";
-import { IIssue } from "../api/interfaces";
+import { IIssue } from "../interfaces";
 
 const IssuesContext = createContext<IIssuesContext | null>(null);
 

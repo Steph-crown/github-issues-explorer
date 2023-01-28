@@ -1,5 +1,5 @@
 import { FC, ReactNode, useState } from "react";
-import { IIssue } from "../api/interfaces";
+import { IIssue } from "../interfaces";
 import { IssuesContext } from "../contexts";
 
 const IssuesProvider: FC<{ children: ReactNode }> = ({ children }) => {

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import { requests } from "../../api";
 import { IIssue } from "../../interfaces";
 import fakeDb from "../fakeDb";
 import transformIssueResponse from "./transformIssueResponse";
 
-const useListIssues = () => {
+const useList = () => {
   const [{ issues, loadingIssues }, setIssues] = useState<IIssuesState>({
     issues: [],
     loadingIssues: true,
@@ -11,13 +12,15 @@ const useListIssues = () => {
 
   const getIssues = async () => {
     try {
-      setIssues((prev) => ({ ...prev, loadingIssues: true }));
+      // setIssues((prev) => ({ ...prev, loadingIssues: true }));
+      // const res = await fakeDb.issues;
+      // setIssues((prev) => ({
+      //   ...prev,
+      //   issues: transformIssueResponse(res.items),
+      // }));
 
-      const res = await fakeDb.issues;
-      setIssues((prev) => ({
-        ...prev,
-        issues: transformIssueResponse(res.items),
-      }));
+      const res = await requests.getIssues();
+      console.log("The response uis this", res);
     } catch (error) {
       console.log("Error");
       getIssues();
@@ -34,7 +37,7 @@ const useListIssues = () => {
   return { getIssues, issues, loadingIssues };
 };
 
-export default useListIssues;
+export default useList;
 
 interface IIssuesState {
   issues: IIssue[];
